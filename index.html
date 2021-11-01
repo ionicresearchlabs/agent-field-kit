@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Agent Field Kit</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./styles/pure-2.0.6-min.css" type="text/css">
+      <link rel="stylesheet" href="./styles/index.css" type="text/css">
+      <script src="./NRT/BinauralBeat.js" type="text/javascript" language="javascript"></script>
+      <script src="./NRT/Haptics.js" type="text/javascript" language="javascript"></script>
+      <script src="./NRT/Visuals.js" type="text/javascript" language="javascript"></script>
+      <script src="./NRT/index.js" type="text/javascript" language="javascript"></script>
+      <script src="./SSA/index.js" type="text/javascript" language="javascript"></script>
+      <!-- script src="./EyesEars/index.js" type="text/javascript" language="javascript"></script -->
+      <script src="index.js" type="text/javascript" language="javascript"></script>
+   </head>
+   <body>
+      <div id="main-menu" class="pure-menu pure-menu-horizontal">
+        <ul class="pure-menu-list">
+         <li class="pure-menu-item pure-menu-has-children">
+           <a href="#" id="menuLink1" class="pure-menu-link" onclick="showMenu('#submenu1')">FIELD KIT</a>
+           <ul id="submenu1" class="pure-menu-children">
+                 <li class="pure-menu-item">
+                     <a href="#" class="pure-menu-link" onclick="showSection('NRT')">NRT</a>
+                 </li>
+                 <li class="pure-menu-item">
+                     <a href="#" class="pure-menu-link" onclick="showSection('SSA')">SSA</a>
+                 </li>
+                 <!-- li class="pure-menu-item">
+                     <a href="#" class="pure-menu-link" onclick="showSection('EyesEars')">Eyes &amp; Ears</a>
+                 </li -->
+             </ul>
+         </li>
+       </ul>
+     </div>
+      <section id="NRT">
+        <h2>NRT</h2>
+       <div id="parameters">
+         Base Frequency (Hz):<br>
+         <div class="verticalCenter">
+           <input id="basefreq" name="basefreq" type="number" value="120" max="24000" min="20" />
+           <input type="range" min="0" max="2000" value="94.0" step="0.5" class="slider" id="baseFSlider">
+         </div>
+         Beat Frequency (Hz):<br>
+          <div class="verticalCenter">
+             <input id="beatfreq" name="beatfreq" type="number" value="22.00" max="300" min="0.05" step="0.05" />
+             <input type="range" min="1" max="100" value="4.7" step="0.25" class="slider" id="beatFSlider">
+          </div>
+         <br><br>
+         <button class="pure-button" id="startStopButton" onclick="nrt.startStopPlayback()"><span id="start">&#x25B6;&nbsp;START</span><span id="stop">&#x23F9;&nbsp;STOP</span></button>
+       </div>
+       <div id="volumecontainer" class="verticalCenter">
+         &#x1F508;<input type="range" min="1" max="100" value="50" step="1" class="slider" id="volumeSlider" />&nbsp;&#x1F50A;
+       </div>
+       <div class="verticalCenter" id="optionscontainer">
+         <div class="hapticscontainer verticalCenter">
+          &#x1F590;&nbsp;<label class="switch"><input type="checkbox" id="hapticsSwitch"><span class="cbslider round"></span></label><br>
+          &#x1F441;&nbsp;<label class="switch"><input type="checkbox" id="visualsSwitch"><span class="cbslider round"></span></label><br>
+         </div>
+         <div class="visualscontainer verticalCenter">
+            <div>&#x1F3A8;&nbsp;<br><input type="color" id="visualscolor1" name="visualscolor1" value="#e66465"></div><div><input type="color" id="visualscolor2" name="visualscolor2" value="#e66465"></div>
+         </div>
+       </div>
+     </section>
+     <section id="SSA">
+       <h2>SSA</h2><div id="clock">&#x1f55b;</div><br>
+        <div class="output-container"><br>Average:&nbsp;<div class="output-text" id="averageTime">00:00</div><br>Current: <div id="currentTime" class="output-text">00:00</div><br><br><button class="pure-button" id="resetButton" onclick="ssa.resetTimer()"><span id="label">RESET</span></button></div><br>
+        <div class="input-container">Minimum seconds:<br><input type="number" class="short-input" id="minRandomSeconds" value="300" step="1"></div>&nbsp;&nbsp;<div class="input-container">Maximum seconds:<br><input type="number" class="short-input" id="maxRandomSeconds" value="900" step="1"></div>
+        <input type="text" class="long-input" id="item1" name="item1" placeholder="Spot Situational Analysis #1">
+        <input type="text" class="long-input" id="item2" name="item2" placeholder="Spot Situational Analysis #2">
+        <input type="text" class="long-input" id="item3" name="item3" placeholder="Spot Situational Analysis #3">
+        <input type="text" class="long-input" id="item4" name="item4" placeholder="Spot Situational Analysis #4">
+        <input type="text" class="long-input" id="item5" name="item5" placeholder="Spot Situational Analysis #5">
+        <button class="pure-button" id="startStopButton" onclick="ssa.startStop()"><span id="start">&#x25B6;&nbsp;START</span><span id="stop">&#x23F9;&nbsp;STOP</span></button>
+     </section>
+     <!-- section id="EyesEars">
+       <h2>Eyes &amp; Ears</h2><br>
+       Filter Frequency (Hz):<br>
+        <div class="verticalCenter">
+           <input id="filterFreq" name="filterFreq" type="number" value="160" max="2000" min="1" step="1" />
+           <input type="range" min="1" max="2000" value="160" step="1" class="slider" id="filterFSlider">
+        </div>
+        Filter Width (Hz):<br>
+        <div class="verticalCenter">
+           <input id="filterFreqWidth" name="filterFreqWidth" type="number" value="22.00" max="300" min="0.05" step="0.05" />
+           <input type="range" min="1" max="100" value="100" step="1" class="slider" id="filterFWSlider">
+        </div>
+       <br><br>
+       <button class="pure-button" id="startStopButton" onclick="eyesears.startStopEars()"><span id="start">&#x25B6;&nbsp;START EARS</span><span id="stop">&#x23F9;&nbsp;STOP EARS</span></button>
+     </section -->
+   </body>
+</html>

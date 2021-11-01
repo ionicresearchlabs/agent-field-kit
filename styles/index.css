@@ -1,0 +1,291 @@
+html {
+  width: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  max-width: 100%;
+  overflow-x:hidden;
+  margin-left: 1%;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+:-webkit-full-screen {
+  width:100%;
+  height:100%;
+}
+
+:fullscreen {
+  width:100%;
+  height:100%;
+}
+
+label {
+  font-family: sans-serif;
+}
+
+section {
+  width: 99%;
+}
+
+button {
+  width: 99%;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  height: 5em;
+  font-size: 1.3em;
+}
+
+input {
+  display: inline-block;
+  width: 46%;
+  font-size: 2em;
+  padding: 0.1em;
+  margin: 0em;
+}
+
+.short-input {
+  display: inline-block;
+  width: 40%;
+  font-size: 2em;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.long-input {
+  display: inline-block;
+  width: 99%;
+  font-size: 2em;
+  padding: 0.5em;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+#baseFSlider {
+  position: relative;
+  width: 48%;
+  margin-left: 1%;
+}
+
+#beatFSlider {
+  position: relative;
+  width: 47%;
+  margin-left: 1%;
+}
+
+h2 {
+  width: 100%;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+#main-menu {
+  z-index: 10000;
+  font-size: 2em;
+}
+
+.pure-menu-link {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.pure-menu-link:hover {
+  color: #FFFFFF;
+  background-color: #000000;
+}
+
+#main-menu > .pure-menu-list {
+  z-index: 10100;
+}
+
+.pure-menu-children {
+  width: 100% !important;
+}
+
+.pure-menu-has-children > .pure-menu-link::after {
+	font-size: 1em;
+}
+
+#NRT > #parameters {
+  position: relative;
+  display:block;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.verticalCenter {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.input-container {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+}
+
+.output-container {
+  width: 99%;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.output-container div {
+  display: inline-block;
+  text-align: center;
+  width: 49%;
+}
+
+.output-container button {
+  margin-bottom: 1em;
+}
+
+.output-text {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+#startStopButton {
+  font-size: 1.5em;
+}
+
+#startStopButton > #start {
+  display: block;
+}
+
+#startStopButton > #stop {
+  display: none;
+}
+
+#SSA > #startStopButton {
+  margin-top: 2em;
+}
+
+#NRT > #volumecontainer {
+  position: relative;
+  display:inline-block;
+  width: 96%;
+  margin-top: 1.5em;
+  font-size: 2em;
+  text-align: center;
+}
+
+#NRT > #volumecontainer #volumeSlider {
+  width: 70%;
+  margin-bottom: 0;
+  height:0.2em;
+}
+
+.hapticscontainer {
+  display: inline-block;
+  width: 48%;
+  margin-top: 1.5em;
+  font-size: 32px;
+}
+
+.visualscontainer {
+  display: inline-block;
+  width: 48%;
+  margin-top: 1.5em;
+  font-size: 32px;
+}
+
+.visualscontainer > div {
+  display:inline-block;
+}
+
+#visualscolor1, #visualscolor2 {
+  width: 80px;
+}
+
+
+#optionscontainer {
+  width:98%;
+}
+
+#optionscontainer {
+  width:98%;
+}
+
+#viscolor {
+  width: 25%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.cbslider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #800000;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.cbslider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .cbslider {
+  background-color: #00CC00;
+}
+
+input:focus + .cbslider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .cbslider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+section#SSA > #clock {
+  font-size: 5em;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.cbslider.round {
+  border-radius: 34px;
+}
+
+.cbslider.round:before {
+  border-radius: 50%;
+}

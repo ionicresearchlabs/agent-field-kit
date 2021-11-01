@@ -1,0 +1,1808 @@
+<!DOCTYPE html><html lang="en"><head>
+      <title>Agent Field Kit</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>/*!
+Pure v2.0.6
+Copyright 2013 Yahoo!
+Licensed under the BSD License.
+https://github.com/pure-css/pure/blob/master/LICENSE
+*/
+/*!
+normalize.css v | MIT License | git.io/normalize
+Copyright (c) Nicolas Gallagher and Jonathan Neal
+*/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{-webkit-box-sizing:content-box;box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{-webkit-box-sizing:border-box;box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}html{font-family:sans-serif}.hidden,[hidden]{display:none!important}.pure-img{max-width:100%;height:auto;display:block}.pure-g{letter-spacing:-.31em;text-rendering:optimizespeed;font-family:FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-ms-flex-line-pack:start;align-content:flex-start}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){table .pure-g{display:block}}.opera-only :-o-prefocus,.pure-g{word-spacing:-0.43em}.pure-u{display:inline-block;letter-spacing:normal;word-spacing:normal;vertical-align:top;text-rendering:auto}.pure-g [class*=pure-u]{font-family:sans-serif}.pure-u-1,.pure-u-1-1,.pure-u-1-12,.pure-u-1-2,.pure-u-1-24,.pure-u-1-3,.pure-u-1-4,.pure-u-1-5,.pure-u-1-6,.pure-u-1-8,.pure-u-10-24,.pure-u-11-12,.pure-u-11-24,.pure-u-12-24,.pure-u-13-24,.pure-u-14-24,.pure-u-15-24,.pure-u-16-24,.pure-u-17-24,.pure-u-18-24,.pure-u-19-24,.pure-u-2-24,.pure-u-2-3,.pure-u-2-5,.pure-u-20-24,.pure-u-21-24,.pure-u-22-24,.pure-u-23-24,.pure-u-24-24,.pure-u-3-24,.pure-u-3-4,.pure-u-3-5,.pure-u-3-8,.pure-u-4-24,.pure-u-4-5,.pure-u-5-12,.pure-u-5-24,.pure-u-5-5,.pure-u-5-6,.pure-u-5-8,.pure-u-6-24,.pure-u-7-12,.pure-u-7-24,.pure-u-7-8,.pure-u-8-24,.pure-u-9-24{display:inline-block;letter-spacing:normal;word-spacing:normal;vertical-align:top;text-rendering:auto}.pure-u-1-24{width:4.1667%}.pure-u-1-12,.pure-u-2-24{width:8.3333%}.pure-u-1-8,.pure-u-3-24{width:12.5%}.pure-u-1-6,.pure-u-4-24{width:16.6667%}.pure-u-1-5{width:20%}.pure-u-5-24{width:20.8333%}.pure-u-1-4,.pure-u-6-24{width:25%}.pure-u-7-24{width:29.1667%}.pure-u-1-3,.pure-u-8-24{width:33.3333%}.pure-u-3-8,.pure-u-9-24{width:37.5%}.pure-u-2-5{width:40%}.pure-u-10-24,.pure-u-5-12{width:41.6667%}.pure-u-11-24{width:45.8333%}.pure-u-1-2,.pure-u-12-24{width:50%}.pure-u-13-24{width:54.1667%}.pure-u-14-24,.pure-u-7-12{width:58.3333%}.pure-u-3-5{width:60%}.pure-u-15-24,.pure-u-5-8{width:62.5%}.pure-u-16-24,.pure-u-2-3{width:66.6667%}.pure-u-17-24{width:70.8333%}.pure-u-18-24,.pure-u-3-4{width:75%}.pure-u-19-24{width:79.1667%}.pure-u-4-5{width:80%}.pure-u-20-24,.pure-u-5-6{width:83.3333%}.pure-u-21-24,.pure-u-7-8{width:87.5%}.pure-u-11-12,.pure-u-22-24{width:91.6667%}.pure-u-23-24{width:95.8333%}.pure-u-1,.pure-u-1-1,.pure-u-24-24,.pure-u-5-5{width:100%}.pure-button{display:inline-block;line-height:normal;white-space:nowrap;vertical-align:middle;text-align:center;cursor:pointer;-webkit-user-drag:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-box-sizing:border-box;box-sizing:border-box}.pure-button::-moz-focus-inner{padding:0;border:0}.pure-button-group{letter-spacing:-.31em;text-rendering:optimizespeed}.opera-only :-o-prefocus,.pure-button-group{word-spacing:-0.43em}.pure-button-group .pure-button{letter-spacing:normal;word-spacing:normal;vertical-align:top;text-rendering:auto}.pure-button{font-family:inherit;font-size:100%;padding:.5em 1em;color:rgba(0,0,0,.8);border:none transparent;background-color:#e6e6e6;text-decoration:none;border-radius:2px}.pure-button-hover,.pure-button:focus,.pure-button:hover{background-image:-webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(40%,rgba(0,0,0,.05)),to(rgba(0,0,0,.1)));background-image:linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1))}.pure-button:focus{outline:0}.pure-button-active,.pure-button:active{-webkit-box-shadow:0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.2) inset;box-shadow:0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.2) inset;border-color:#000}.pure-button-disabled,.pure-button-disabled:active,.pure-button-disabled:focus,.pure-button-disabled:hover,.pure-button[disabled]{border:none;background-image:none;opacity:.4;cursor:not-allowed;-webkit-box-shadow:none;box-shadow:none;pointer-events:none}.pure-button-hidden{display:none}.pure-button-primary,.pure-button-selected,a.pure-button-primary,a.pure-button-selected{background-color:#0078e7;color:#fff}.pure-button-group .pure-button{margin:0;border-radius:0;border-right:1px solid rgba(0,0,0,.2)}.pure-button-group .pure-button:first-child{border-top-left-radius:2px;border-bottom-left-radius:2px}.pure-button-group .pure-button:last-child{border-top-right-radius:2px;border-bottom-right-radius:2px;border-right:none}.pure-form input[type=color],.pure-form input[type=date],.pure-form input[type=datetime-local],.pure-form input[type=datetime],.pure-form input[type=email],.pure-form input[type=month],.pure-form input[type=number],.pure-form input[type=password],.pure-form input[type=search],.pure-form input[type=tel],.pure-form input[type=text],.pure-form input[type=time],.pure-form input[type=url],.pure-form input[type=week],.pure-form select,.pure-form textarea{padding:.5em .6em;display:inline-block;border:1px solid #ccc;-webkit-box-shadow:inset 0 1px 3px #ddd;box-shadow:inset 0 1px 3px #ddd;border-radius:4px;vertical-align:middle;-webkit-box-sizing:border-box;box-sizing:border-box}.pure-form input:not([type]){padding:.5em .6em;display:inline-block;border:1px solid #ccc;-webkit-box-shadow:inset 0 1px 3px #ddd;box-shadow:inset 0 1px 3px #ddd;border-radius:4px;-webkit-box-sizing:border-box;box-sizing:border-box}.pure-form input[type=color]{padding:.2em .5em}.pure-form input[type=color]:focus,.pure-form input[type=date]:focus,.pure-form input[type=datetime-local]:focus,.pure-form input[type=datetime]:focus,.pure-form input[type=email]:focus,.pure-form input[type=month]:focus,.pure-form input[type=number]:focus,.pure-form input[type=password]:focus,.pure-form input[type=search]:focus,.pure-form input[type=tel]:focus,.pure-form input[type=text]:focus,.pure-form input[type=time]:focus,.pure-form input[type=url]:focus,.pure-form input[type=week]:focus,.pure-form select:focus,.pure-form textarea:focus{outline:0;border-color:#129fea}.pure-form input:not([type]):focus{outline:0;border-color:#129fea}.pure-form input[type=checkbox]:focus,.pure-form input[type=file]:focus,.pure-form input[type=radio]:focus{outline:thin solid #129FEA;outline:1px auto #129FEA}.pure-form .pure-checkbox,.pure-form .pure-radio{margin:.5em 0;display:block}.pure-form input[type=color][disabled],.pure-form input[type=date][disabled],.pure-form input[type=datetime-local][disabled],.pure-form input[type=datetime][disabled],.pure-form input[type=email][disabled],.pure-form input[type=month][disabled],.pure-form input[type=number][disabled],.pure-form input[type=password][disabled],.pure-form input[type=search][disabled],.pure-form input[type=tel][disabled],.pure-form input[type=text][disabled],.pure-form input[type=time][disabled],.pure-form input[type=url][disabled],.pure-form input[type=week][disabled],.pure-form select[disabled],.pure-form textarea[disabled]{cursor:not-allowed;background-color:#eaeded;color:#cad2d3}.pure-form input:not([type])[disabled]{cursor:not-allowed;background-color:#eaeded;color:#cad2d3}.pure-form input[readonly],.pure-form select[readonly],.pure-form textarea[readonly]{background-color:#eee;color:#777;border-color:#ccc}.pure-form input:focus:invalid,.pure-form select:focus:invalid,.pure-form textarea:focus:invalid{color:#b94a48;border-color:#e9322d}.pure-form input[type=checkbox]:focus:invalid:focus,.pure-form input[type=file]:focus:invalid:focus,.pure-form input[type=radio]:focus:invalid:focus{outline-color:#e9322d}.pure-form select{height:2.25em;border:1px solid #ccc;background-color:#fff}.pure-form select[multiple]{height:auto}.pure-form label{margin:.5em 0 .2em}.pure-form fieldset{margin:0;padding:.35em 0 .75em;border:0}.pure-form legend{display:block;width:100%;padding:.3em 0;margin-bottom:.3em;color:#333;border-bottom:1px solid #e5e5e5}.pure-form-stacked input[type=color],.pure-form-stacked input[type=date],.pure-form-stacked input[type=datetime-local],.pure-form-stacked input[type=datetime],.pure-form-stacked input[type=email],.pure-form-stacked input[type=file],.pure-form-stacked input[type=month],.pure-form-stacked input[type=number],.pure-form-stacked input[type=password],.pure-form-stacked input[type=search],.pure-form-stacked input[type=tel],.pure-form-stacked input[type=text],.pure-form-stacked input[type=time],.pure-form-stacked input[type=url],.pure-form-stacked input[type=week],.pure-form-stacked label,.pure-form-stacked select,.pure-form-stacked textarea{display:block;margin:.25em 0}.pure-form-stacked input:not([type]){display:block;margin:.25em 0}.pure-form-aligned input,.pure-form-aligned select,.pure-form-aligned textarea,.pure-form-message-inline{display:inline-block;vertical-align:middle}.pure-form-aligned textarea{vertical-align:top}.pure-form-aligned .pure-control-group{margin-bottom:.5em}.pure-form-aligned .pure-control-group label{text-align:right;display:inline-block;vertical-align:middle;width:10em;margin:0 1em 0 0}.pure-form-aligned .pure-controls{margin:1.5em 0 0 11em}.pure-form .pure-input-rounded,.pure-form input.pure-input-rounded{border-radius:2em;padding:.5em 1em}.pure-form .pure-group fieldset{margin-bottom:10px}.pure-form .pure-group input,.pure-form .pure-group textarea{display:block;padding:10px;margin:0 0 -1px;border-radius:0;position:relative;top:-1px}.pure-form .pure-group input:focus,.pure-form .pure-group textarea:focus{z-index:3}.pure-form .pure-group input:first-child,.pure-form .pure-group textarea:first-child{top:1px;border-radius:4px 4px 0 0;margin:0}.pure-form .pure-group input:first-child:last-child,.pure-form .pure-group textarea:first-child:last-child{top:1px;border-radius:4px;margin:0}.pure-form .pure-group input:last-child,.pure-form .pure-group textarea:last-child{top:-2px;border-radius:0 0 4px 4px;margin:0}.pure-form .pure-group button{margin:.35em 0}.pure-form .pure-input-1{width:100%}.pure-form .pure-input-3-4{width:75%}.pure-form .pure-input-2-3{width:66%}.pure-form .pure-input-1-2{width:50%}.pure-form .pure-input-1-3{width:33%}.pure-form .pure-input-1-4{width:25%}.pure-form-message-inline{display:inline-block;padding-left:.3em;color:#666;vertical-align:middle;font-size:.875em}.pure-form-message{display:block;color:#666;font-size:.875em}@media only screen and (max-width :480px){.pure-form button[type=submit]{margin:.7em 0 0}.pure-form input:not([type]),.pure-form input[type=color],.pure-form input[type=date],.pure-form input[type=datetime-local],.pure-form input[type=datetime],.pure-form input[type=email],.pure-form input[type=month],.pure-form input[type=number],.pure-form input[type=password],.pure-form input[type=search],.pure-form input[type=tel],.pure-form input[type=text],.pure-form input[type=time],.pure-form input[type=url],.pure-form input[type=week],.pure-form label{margin-bottom:.3em;display:block}.pure-group input:not([type]),.pure-group input[type=color],.pure-group input[type=date],.pure-group input[type=datetime-local],.pure-group input[type=datetime],.pure-group input[type=email],.pure-group input[type=month],.pure-group input[type=number],.pure-group input[type=password],.pure-group input[type=search],.pure-group input[type=tel],.pure-group input[type=text],.pure-group input[type=time],.pure-group input[type=url],.pure-group input[type=week]{margin-bottom:0}.pure-form-aligned .pure-control-group label{margin-bottom:.3em;text-align:left;display:block;width:100%}.pure-form-aligned .pure-controls{margin:1.5em 0 0 0}.pure-form-message,.pure-form-message-inline{display:block;font-size:.75em;padding:.2em 0 .8em}}.pure-menu{-webkit-box-sizing:border-box;box-sizing:border-box}.pure-menu-fixed{position:fixed;left:0;top:0;z-index:3}.pure-menu-item,.pure-menu-list{position:relative}.pure-menu-list{list-style:none;margin:0;padding:0}.pure-menu-item{padding:0;margin:0;height:100%}.pure-menu-heading,.pure-menu-link{display:block;text-decoration:none;white-space:nowrap}.pure-menu-horizontal{width:100%;white-space:nowrap}.pure-menu-horizontal .pure-menu-list{display:inline-block}.pure-menu-horizontal .pure-menu-heading,.pure-menu-horizontal .pure-menu-item,.pure-menu-horizontal .pure-menu-separator{display:inline-block;vertical-align:middle}.pure-menu-item .pure-menu-item{display:block}.pure-menu-children{display:none;position:absolute;left:100%;top:0;margin:0;padding:0;z-index:3}.pure-menu-horizontal .pure-menu-children{left:0;top:auto;width:inherit}.pure-menu-active>.pure-menu-children,.pure-menu-allow-hover:hover>.pure-menu-children{display:block;position:absolute}.pure-menu-has-children>.pure-menu-link:after{padding-left:.5em;content:"\25B8";font-size:small}.pure-menu-horizontal .pure-menu-has-children>.pure-menu-link:after{content:"\25BE"}.pure-menu-scrollable{overflow-y:scroll;overflow-x:hidden}.pure-menu-scrollable .pure-menu-list{display:block}.pure-menu-horizontal.pure-menu-scrollable .pure-menu-list{display:inline-block}.pure-menu-horizontal.pure-menu-scrollable{white-space:nowrap;overflow-y:hidden;overflow-x:auto;padding:.5em 0}.pure-menu-horizontal .pure-menu-children .pure-menu-separator,.pure-menu-separator{background-color:#ccc;height:1px;margin:.3em 0}.pure-menu-horizontal .pure-menu-separator{width:1px;height:1.3em;margin:0 .3em}.pure-menu-horizontal .pure-menu-children .pure-menu-separator{display:block;width:auto}.pure-menu-heading{text-transform:uppercase;color:#565d64}.pure-menu-link{color:#777}.pure-menu-children{background-color:#fff}.pure-menu-heading,.pure-menu-link{padding:.5em 1em}.pure-menu-disabled{opacity:.5}.pure-menu-disabled .pure-menu-link:hover{background-color:transparent;cursor:default}.pure-menu-active>.pure-menu-link,.pure-menu-link:focus,.pure-menu-link:hover{background-color:#eee}.pure-menu-selected>.pure-menu-link,.pure-menu-selected>.pure-menu-link:visited{color:#000}.pure-table{border-collapse:collapse;border-spacing:0;empty-cells:show;border:1px solid #cbcbcb}.pure-table caption{color:#000;font:italic 85%/1 arial,sans-serif;padding:1em 0;text-align:center}.pure-table td,.pure-table th{border-left:1px solid #cbcbcb;border-width:0 0 0 1px;font-size:inherit;margin:0;overflow:visible;padding:.5em 1em}.pure-table thead{background-color:#e0e0e0;color:#000;text-align:left;vertical-align:bottom}.pure-table td{background-color:transparent}.pure-table-odd td{background-color:#f2f2f2}.pure-table-striped tr:nth-child(2n-1) td{background-color:#f2f2f2}.pure-table-bordered td{border-bottom:1px solid #cbcbcb}.pure-table-bordered tbody>tr:last-child>td{border-bottom-width:0}.pure-table-horizontal td,.pure-table-horizontal th{border-width:0 0 1px 0;border-bottom:1px solid #cbcbcb}.pure-table-horizontal tbody>tr:last-child>td{border-bottom-width:0}</style>
+      <style>html {
+  width: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  max-width: 100%;
+  overflow-x:hidden;
+  margin-left: 1%;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+:-webkit-full-screen {
+  width:100%;
+  height:100%;
+}
+
+:fullscreen {
+  width:100%;
+  height:100%;
+}
+
+label {
+  font-family: sans-serif;
+}
+
+section {
+  width: 99%;
+}
+
+button {
+  width: 99%;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  height: 5em;
+  font-size: 1.3em;
+}
+
+input {
+  display: inline-block;
+  width: 46%;
+  font-size: 2em;
+  padding: 0.1em;
+  margin: 0em;
+}
+
+.short-input {
+  display: inline-block;
+  width: 40%;
+  font-size: 2em;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.long-input {
+  display: inline-block;
+  width: 99%;
+  font-size: 2em;
+  padding: 0.5em;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+#baseFSlider {
+  position: relative;
+  width: 48%;
+  margin-left: 1%;
+}
+
+#beatFSlider {
+  position: relative;
+  width: 47%;
+  margin-left: 1%;
+}
+
+h2 {
+  width: 100%;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+#main-menu {
+  z-index: 10000;
+  font-size: 2em;
+}
+
+.pure-menu-link {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.pure-menu-link:hover {
+  color: #FFFFFF;
+  background-color: #000000;
+}
+
+#main-menu > .pure-menu-list {
+  z-index: 10100;
+}
+
+.pure-menu-children {
+  width: 100% !important;
+}
+
+.pure-menu-has-children > .pure-menu-link::after {
+	font-size: 1em;
+}
+
+#NRT > #parameters {
+  position: relative;
+  display:block;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.verticalCenter {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.input-container {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+}
+
+.output-container {
+  width: 99%;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.output-container div {
+  display: inline-block;
+  text-align: center;
+  width: 49%;
+}
+
+.output-container button {
+  margin-bottom: 1em;
+}
+
+.output-text {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+#startStopButton {
+  font-size: 1.5em;
+}
+
+#startStopButton > #start {
+  display: block;
+}
+
+#startStopButton > #stop {
+  display: none;
+}
+
+#SSA > #startStopButton {
+  margin-top: 2em;
+}
+
+#NRT > #volumecontainer {
+  position: relative;
+  display:inline-block;
+  width: 96%;
+  margin-top: 1.5em;
+  font-size: 2em;
+  text-align: center;
+}
+
+#NRT > #volumecontainer #volumeSlider {
+  width: 70%;
+  margin-bottom: 0;
+  height:0.2em;
+}
+
+.hapticscontainer {
+  display: inline-block;
+  width: 48%;
+  margin-top: 1.5em;
+  font-size: 32px;
+}
+
+.visualscontainer {
+  display: inline-block;
+  width: 48%;
+  margin-top: 1.5em;
+  font-size: 32px;
+}
+
+.visualscontainer > div {
+  display:inline-block;
+}
+
+#visualscolor1, #visualscolor2 {
+  width: 80px;
+}
+
+
+#optionscontainer {
+  width:98%;
+}
+
+#optionscontainer {
+  width:98%;
+}
+
+#viscolor {
+  width: 25%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.cbslider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #800000;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.cbslider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .cbslider {
+  background-color: #00CC00;
+}
+
+input:focus + .cbslider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .cbslider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+section#SSA > #clock {
+  font-size: 5em;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.cbslider.round {
+  border-radius: 34px;
+}
+
+.cbslider.round:before {
+  border-radius: 50%;
+}
+</style>
+      <script type="text/javascript" language="javascript">/**
+* @class Functionality for the NRT Binaural Beat sub-component.
+*
+* @author IONIC Research Labs, a division of TSG.
+* @version 0.1.0
+* @copyright MIT License
+*/
+class BinauralBeat extends EventTarget {
+
+  /**
+  * Creates a new instance.
+  */
+  constructor() {
+    super();
+    this._oscillator1 = null;
+    this._oscillator2 = null;
+  }
+
+  /**
+  * @property {AudioContext} An AudioContext object for use by any instance.
+  * animation.
+  * @readonly
+  * @static
+  */
+  static get audioContext() {
+    if ((BinauralBeat._audioContext == null) || (BinauralBeat._audioContext == undefined)) {
+      BinauralBeat._audioContext = new AudioContext({
+         latencyHint: "playback",
+         sampleRate: 44100
+      });
+    }
+    return (BinauralBeat._audioContext);
+  }
+
+  /**
+  * @property {Boolean} True if the component is currently producing audio output.
+  * @readonly
+  */
+  get playing() {
+    if ((this._playing == null) || (this._playing ==undefined)) {
+      this._playing = false;
+    }
+    return (this._playing);
+  }
+
+  /**
+  * @property {Number} The current playback volume (0 to 100);
+  */
+  get volume() {
+    if ((this._volume == null) || (this._volume == undefined)) {
+      this._volume = BinauralBeat.audioContext.createGain();
+      this._volume.connect(BinauralBeat.audioContext.destination);
+    }
+    return (this._volume.gain.value * 100);
+  }
+
+  set volume (volSet) {
+    if ((this._volume == null) || (this._volume == undefined)) {
+      this._volume = BinauralBeat.audioContext.createGain();
+      this._volume.connect(BinauralBeat.audioContext.destination);
+    }
+    this._volume.gain.value = volSet / 100;
+  }
+
+  /**
+  * @property {Number} The current base frequency to use, in hertz.
+  * May be updated while playing.
+  */
+  get baseFrequency() {
+    if ((this._baseFreq == undefined) || (this._baseFreq == null)) {
+      this._baseFreq = 220;
+    }
+    return (this._baseFreq);
+  }
+
+  set baseFrequency(freqSet) {
+    this._baseFreq = freqSet;
+    if (this.playing) {
+      var leftFreq = this._baseFreq - (this.beatFrequency/2);
+      var rightFreq = this._baseFreq + (this.beatFrequency/2);
+      this._oscillator1.frequency.value = leftFreq;
+      this._oscillator2.frequency.value = rightFreq;
+    }
+  }
+
+  /**
+  * @property {Number} The current beat frequency to use, in hertz.
+  * May be updated while playing.
+  */
+  get beatFrequency() {
+    if ((this._beatFreq == undefined) || (this._beatFreq == null)) {
+      this._beatFreq = 20;
+    }
+    return (this._beatFreq);
+  }
+
+  set beatFrequency(freqSet) {
+    this._beatFreq = freqSet;
+    if (this.playing) {
+      var leftFreq = this.baseFrequency - (this._beatFreq/2);
+      var rightFreq = this.baseFrequency + (this._beatFreq/2);
+      this._oscillator1.frequency.value = leftFreq;
+      this._oscillator2.frequency.value = rightFreq;
+    }
+  }
+
+  /**
+  * Starts NRT playback, stopping any current playback first.
+  */
+  start() {
+    if (this.playing) {
+      this.stop();
+    }
+    if ((this._volume == null) || (this._volume == undefined)) {
+      this._volume = BinauralBeat.audioContext.createGain();
+      this._volume.connect(BinauralBeat.audioContext.destination);
+    }
+    var leftFreq = this.baseFrequency - (this.beatFrequency/2);
+    var rightFreq = this.baseFrequency + (this.beatFrequency/2);
+    this._oscillator1 = BinauralBeat.audioContext.createOscillator();
+    this._oscillator1.type = "sine";
+    this._oscillator1.frequency.value = leftFreq;
+    this._oscillator2 = BinauralBeat.audioContext.createOscillator();
+    this._oscillator2.type = "sine";
+    this._oscillator2.frequency.value = rightFreq;
+    var panner = BinauralBeat.audioContext.createStereoPanner();
+    this._oscillator1.connect(panner);
+    panner.connect(this._volume);
+    panner.pan.value = -1;
+    panner = BinauralBeat.audioContext.createStereoPanner();
+    this._oscillator2.connect(panner);
+    panner.connect(this._volume);
+    panner.pan.value = 1;
+    this._oscillator1.start();
+    this._oscillator2.start();
+    this._playing = true;
+  }
+
+  /**
+  * Stops NRT playback.
+  */
+  stop() {
+    if (this._oscillator1 != null) {
+      this._oscillator1.stop();
+      this._oscillator1 = null;
+      delete this._oscillator1;
+    }
+    if (this._oscillator2 != null) {
+      this._oscillator2.stop();
+      this._oscillator2 = null;
+      delete this._oscillator2;
+    }
+    this._playing = false;
+  }
+
+  /**
+  * @private
+  */
+  toString() {
+    return ("[BinauralBeat]");
+  }
+
+}
+</script>
+      <script type="text/javascript" language="javascript">/**
+* @class Functionality for the NRT haptics sub-component.
+*
+* @author IONIC Research Labs, a division of TSG.
+* @version 0.1.0
+* @copyright MIT License
+*/
+class Haptics extends EventTarget {
+
+  /**
+  * Creates a new instance.
+  */
+  constructor() {
+    super();
+    this._active = false;
+  }
+
+  /**
+  * @property {Boolean} True if the component is currently producing haptic
+  * output.
+  * @readonly
+  */
+  get active() {
+    return (this._active);
+  }
+
+  /**
+  * Starts the haptics output.
+  *
+  * @param {Number} onms The amount of time for active haptic output, in
+  * milliseconds.
+  * @param {Number} offms The amount of time to rest (no haptic output),
+  * in milliseconds.
+  */
+  start(onms, offms) {
+    if (this.active) {
+      this.stop();
+    }
+    this._interval = setInterval(_ => {
+      navigator.vibrate(onms);
+    }, (onms+offms));
+    this._active = true;
+  }
+
+  /**
+  * Stops the haptics output.
+  */
+  stop() {
+    try {
+      clearInterval(this._interval);
+      navigator.vibrate(0);
+    } catch (err) {}
+  }
+
+  /**
+  * @private
+  */
+  toString() {
+    return ("[Haptics]");
+  }
+
+}
+</script>
+      <script type="text/javascript" language="javascript">/**
+* @class Functionality for the NRT visuals sub-component.
+*
+* @author IONIC Research Labs, a division of TSG.
+* @version 0.1.0
+* @copyright MIT License
+*/
+class Visuals extends EventTarget {
+
+  /**
+  * Creates a new instance.
+  *
+  * @param {String} parentSelector The selector of the parent element to use
+  * to render visuals.
+  * @param {String} id The CSS selector id of the element containing the
+  * component UI.
+  */
+  constructor(parentSelector, id="visuals") {
+    super();
+    this._parentElement = null;
+    this._colorBlockElement = null;
+    this._color = null;
+    this._playing = false;
+    if (document.readyState != "complete") {
+      document.addEventListener("readystatechange", event => {
+        if (document.readyState == "complete") {
+          this.initialize(parentSelector, id);
+        }
+      });
+    } else {
+      this.initialize(parentSelector, id);
+    }
+  }
+
+  /**
+  * Initializes the instance by setting default values, restoring the previous
+  * session, and updating the UI.
+  *
+  * @param {String} parentSelector The selector of the parent element.
+  * @param {String} id The selector of the child element.
+  */
+  initialize(parentSelector, id="visual") {
+    this.createColorBlock(parentSelector, id);
+    this.createCSSPulse();
+  }
+
+  /**
+  * @property {Boolean} True if the component is currently producing visual output.
+  * @readonly
+  */
+  get playing() {
+    return (this._playing);
+  }
+
+  /**
+  * @property {Array} A two-element array containing the two pulse animation colors.
+  */
+  set colors(colSet) {
+    this._colSet = colSet;
+    this.draw(this._colorBlockElement, colSet[0]);
+    this.createCSSPulse(colSet[0], colSet[1])
+  }
+
+  get colors() {
+    if (this._colSet == undefined) {
+      this._colSet = [];
+    }
+    return (this._colSet);
+  }
+
+  /**
+  * The current maximum display width reported by the browser.
+  * @return {Number} The current maximum display width reported by the browser.
+  */
+  getWidth() {
+    var max = Math.max(
+      document.body.scrollWidth,
+      document.documentElement.scrollWidth,
+      document.body.offsetWidth,
+      document.documentElement.offsetWidth,
+      document.documentElement.clientWidth
+    );
+    return (max);
+  }
+
+  /**
+  * The current maximum display height reported by the browser.
+  * @return {Number} The current maximum display height reported by the browser.
+  */
+  getHeight() {
+    var max = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight,
+      document.documentElement.clientHeight
+    );
+    return (max);
+  }
+
+  /**
+  * Creates a single color block within a DOM container.
+  *
+  * @param {String} parentSelector The selector of the parent element to which to append the color block.
+  * @param {String} id The seletor id to apply to the newly created color block.
+  */
+  createColorBlock (parentSelector, id) {
+    var parentElement = document.querySelector(parentSelector);
+    this._parentElement = parentElement;
+    this._colorBlockElement = document.createElement("div");
+    this._colorBlockElement.id = id;
+    this._colorBlockElement.onclick = this.onBlockClick.bind(this);
+    this._colorBlockElement.ontouch = this.onBlockClick.bind(this);
+    this._colorBlockElement.style.display = "block";
+    this._colorBlockElement.style.width = "150%";
+    this._colorBlockElement.style.height = this.getHeight()+"px";
+    this._colorBlockElement.style.margin = "0";
+    this._colorBlockElement.style.padding = "0";
+    parentElement.appendChild(this._colorBlockElement);
+  }
+
+  /**
+  * Invoked on a click or touch event registered on the color block.
+  *
+  * @param {Event} event A 'click' or 'touch' event object.
+  */
+  onBlockClick(event) {
+    this.stop();
+    this._colorBlockElement.style.width = 0;
+    this._colorBlockElement.style.height = 0;
+    var event = new Event("stop");
+    this.dispatchEvent(event);
+  }
+
+  /**
+  * Hides the color block.
+  */
+  hide() {
+    this._colorBlockElement.style.display = "none";
+  }
+
+  /**
+  * Shows / unhides the color block.
+  */
+  show() {
+    this._colorBlockElement.style.display = "block";
+  }
+
+  /**
+  * Creates a pulsing CSS animation using two colors and appends it to the document's DOM.
+  *
+  * @param {String} color1 The first color of the pulse animation.
+  * @param {String} color2 The second color of the pulse animation.
+  * @param {String} className The CSS class name to apply to the animation definition.
+  */
+  createCSSPulse(color1="#FFFFFF", color2="#000000", className="pulseAnimation") {
+    var CSS = `
+    @keyframes ${className} {
+      0%   { background-color:${color1}; }
+      50%  { background-color:${color2}; }
+      100% { background-color:${color1}; }
+    }
+    @-o-keyframes ${className}{
+      0%   { background-color:${color1}; }
+      50%  { background-color:${color2}; }
+      100% { background-color:${color1}; }
+    }
+    @-moz-keyframes ${className}{
+      0%   { background-color:${color1}; }
+      50%  { background-color:${color2}; }
+      100% { background-color:${color1}; }
+    }
+    @-webkit-keyframes ${className} {
+      0%   { background-color:${color1}; }
+      50%  { background-color:${color2}; }
+      100% { background-color:${color1}; }
+    }
+    `;
+    if ((this._styleElement == undefined) || (this._styleElement == null)) {
+      var styleElement = document.createElement("style");
+      this._styleElement = styleElement;
+      this._colorBlockElement.insertBefore(styleElement, this._colorBlockElement.firstChild);
+    }
+    this._styleElement.innerHTML = CSS;
+  }
+
+  /**
+  * Styles an element as a color box.
+  *
+  * @param {HTMLElement} element The element to style.
+  * @param {String} color The background color style to apply to the element.
+  */
+  draw(element, color) {
+     element.style.position = "absolute";
+     element.style.left = "0px";
+     element.style.top = "0px";
+     element.style.overflow = "hidden";
+     element.style.width = "150%";
+     element.style.height = "100%";
+     element.style.zIndex = 100000;
+     element.style["background-color"] = color;
+  }
+
+  /**
+  * Starts the visual pulse animation and attempts to set the display to fullscreen mode.
+  *
+  * @param {HTMLElement} element The element (box) to use for the animation cycle.
+  * @param {Number} hz The frequency at which to cycle the animation, in hertz.
+  * @param {String} className The CSS class name containing the pulse animation definition.
+  */
+  startPulse (element, hz, className="pulseAnimation") {
+    var ms = Math.floor((1/hz)*1000);
+    var animationStyle = `${className} ${ms}ms ease-in-out infinite`;
+    element.style.animation = animationStyle;
+    element.style.display = "block";
+    var elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    }
+  }
+
+  /**
+  * Stops the visual pulse animation.
+  *
+  * @param {HTMLElement} element The element (box) to stop the animation for.
+  */
+  stopPulse (element) {
+    element.style.animation = "";
+    element.style.display = "none";
+    try {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(_ => {});
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen().catch(_ => {});
+      }
+    } catch (err) {}
+  }
+
+  /**
+  * Starts the visual pulse animation.
+  *
+  * @param {Number} hz The frequency to pulse the animation at, in hertz.
+  */
+  start(hz) {
+    if (this.playing) {
+      this.stop();
+    }
+    this.startPulse(this._colorBlockElement, hz);
+    this._playing = true;
+  }
+
+  /**
+  * Stops the visual pulse animation.
+  */
+  stop() {
+    this.stopPulse(this._colorBlockElement);
+    this._playing = false;
+  }
+
+  /**
+  * @private
+  */
+  toString() {
+    return ("[Visuals]");
+  }
+
+}
+</script>
+      <script type="text/javascript" language="javascript">/**
+* @class Functionality for Neural Resonance Technology component.
+*/
+class NRT extends EventTarget {
+
+  /**
+  * Creates a new instance.
+  */
+  constructor() {
+    super();
+    if (document.readyState != "complete") {
+      document.addEventListener("readystatechange", event => {
+        if (document.readyState == "complete") {
+          this.initialize();
+        }
+      });
+    } else {
+      this.initialize();
+    }
+  }
+
+  /**
+  * Initializes the instance by setting default values, restoring the previous
+  * session, and updating the UI.
+  */
+  initialize() {
+    document.querySelector("section#NRT").instance = this;
+    this._binauralbeat = new BinauralBeat();
+    this._haptics = new Haptics();
+    this._visuals = new Visuals("body");
+    this._playing = false;
+    this._hapticsEnabled = false;
+    this._visualsEnabled = false;
+    this.restoreSession();
+    document.querySelector("#basefreq").addEventListener("change", this.paramsChanged.bind(this));
+    document.querySelector("#beatfreq").addEventListener("change", this.paramsChanged.bind(this));
+    let slider = document.querySelector("#baseFSlider");
+    slider.oninput = this.onBaseFSliderUpdate.bind(this, slider);
+    slider.onchange = this.saveSession.bind(this);
+    slider = document.querySelector("#beatFSlider");
+    slider.oninput = this.onBeatFSliderUpdate.bind(this, slider);
+    slider.onchange = this.saveSession.bind(this);
+    slider = document.querySelector("#volumeSlider");
+    slider.oninput = this.onVolumeSliderUpdate.bind(this, slider);
+    slider.onchange = this.saveSession.bind(this);
+    document.querySelector("#hapticsSwitch").addEventListener("change", this.onHapticsSwitchUpdate.bind(this));
+    document.querySelector("#visualsSwitch").addEventListener("change", this.onVisualsSwitchUpdate.bind(this));
+    document.querySelector("#visualscolor1").addEventListener("change", this.saveSession.bind(this));
+    document.querySelector("#visualscolor2").addEventListener("change", this.saveSession.bind(this));
+    this._visuals.addEventListener("stop", this.onVisualsStop.bind(this));
+  }
+
+  /**
+  * Restores to the previously saved session settings from local storage,
+  * or to defaults if none saved.
+  */
+  restoreSession() {
+    var bbSettings = localStorage.getItem("AFK_NRT");
+    if (bbSettings != null) {
+      bbSettings = JSON.parse(bbSettings);
+      document.querySelector("#basefreq").value = bbSettings.baseFreq;
+      document.querySelector("#baseFSlider").value = bbSettings.baseFreq;
+      document.querySelector("#beatfreq").value = bbSettings.beatFreq;
+      document.querySelector("#beatFSlider").value = bbSettings.beatFreq;
+      document.querySelector("#volumeSlider").value = bbSettings.volume;
+      document.querySelector("#hapticsSwitch").checked = bbSettings.hapticsEnabled;
+      document.querySelector("#visualsSwitch").checked = bbSettings.visualsEnabled;
+      document.querySelector("#visualscolor1").value = bbSettings.visualscolor1;
+      document.querySelector("#visualscolor2").value = bbSettings.visualscolor2;
+      this._hapticsEnabled = bbSettings.hapticsEnabled;
+      this._visualsEnabled = bbSettings.visualsEnabled;
+      console.log("Restored settings:"+JSON.stringify(bbSettings));
+    } else {
+      console.warn ("No previous settings to restore.");
+    }
+  }
+
+  /**
+  * Saves the current session settings to local storage.
+  */
+  saveSession() {
+    var bbSettings = new Object();
+    bbSettings.baseFreq = Number(document.querySelector("#basefreq").value);
+    bbSettings.beatFreq = Number(document.querySelector("#beatfreq").value);
+    bbSettings.volume = Number(document.querySelector("#volumeSlider").value);
+    bbSettings.hapticsEnabled = document.querySelector("#hapticsSwitch").checked;
+    bbSettings.visualsEnabled = document.querySelector("#visualsSwitch").checked;
+    bbSettings.visualscolor1 = document.querySelector("#visualscolor1").value; //hex string
+    bbSettings.visualscolor2 = document.querySelector("#visualscolor2").value;
+    console.log ("New settings:\n"+JSON.stringify(bbSettings));
+    localStorage.AFK_NRT = JSON.stringify(bbSettings);
+  }
+
+  /**
+  * Invoked whenever either core NRT parameter has changed in the UI.
+  *
+  * @param {Event} event A 'change' event object.
+  */
+  paramsChanged(event) {
+    var baseElement = document.querySelector("#basefreq");
+    var beatElement = document.querySelector("#beatfreq");
+    var baseFreq = Number(baseElement.value);
+    var beatFreq = Number(beatElement.value);
+    this._binauralbeat.baseFrequency = baseFreq;
+    this._binauralbeat.beatFrequency = beatFreq;
+    document.querySelector("#baseFSlider").value = baseFreq;
+    document.querySelector("#beatFSlider").value = beatFreq;
+    if (this._playing == true) {
+      this.stopHaptics();
+      this.startHaptics();
+    }
+    this.saveSession();
+  }
+
+  /**
+  * Invoked when the haptics switch is toggled.
+  *
+  * @param {Event} event A 'change' event.
+  */
+  onHapticsSwitchUpdate(event) {
+    var switchElement = document.querySelector("#hapticsSwitch");
+    var enabled = switchElement.checked;
+    if (enabled == true) {
+      this._hapticsEnabled = true;
+      if (this._playing) {
+        this.startHaptics();
+      }
+    } else {
+      this.stopHaptics();
+      this._hapticsEnabled = false;
+    }
+    this.saveSession();
+  }
+
+  /**
+  * Invoked when the visuals switch is toggled.
+  *
+  * @param {Event} event A 'change' event.
+  */
+  onVisualsSwitchUpdate(event) {
+    var switchElement = document.querySelector("#visualsSwitch");
+    var enabled = switchElement.checked;
+    if (enabled == true) {
+      this._visualsEnabled = true;
+      if (this._playing) {
+        this.startVisuals();
+      }
+    } else {
+      this._visualsEnabled = false;
+    }
+    this.saveSession();
+  }
+
+  /**
+  * Invoked when the visuals object reports that it has stopped playing.
+  *
+  * @param {Event} event A 'stop' event.
+  */
+  onVisualsStop(event) {
+    document.querySelector("#visualsSwitch").checked = false;
+    showSection("NRT");
+    this._visualsEnabled = false;
+  }
+
+  /**
+  * Starts the haptics using current beat frequency setting.
+  */
+  startHaptics() {
+    var beatElement = document.querySelector("#beatfreq");
+    var beatFreq = (1 / Number(beatElement.value))*1000;
+    this._haptics.start((beatFreq/2), (beatFreq/2));
+  }
+
+  /**
+  * Stops the haptics object's playback.
+  */
+  stopHaptics() {
+    this._haptics.stop();
+  }
+
+  /**
+  * Starts the visuals object at the specified beat frequency.
+  */
+  startVisuals() {
+    this._visuals.show();
+    var beatElement = document.querySelector("#beatfreq");
+    this._visuals.colors = [document.querySelector("#visualscolor1").value,
+                            document.querySelector("#visualscolor2").value];
+    this._visuals.start(Number(beatElement.value));
+  }
+
+  /**
+  * Stops the visuals object's playback.
+  */
+  stopVisuals() {
+    this._visuals.stop();
+    this._visuals.hide();
+  }
+
+  /**
+  * Invoked when the volume slider is changed.
+  *
+  * @param {Event} event An 'input' event object.
+  */
+  onVolumeSliderUpdate(event) {
+    var volSlider = document.querySelector("#volumeSlider");
+    var volume = Number(volSlider.value);
+    this._binauralbeat.volume = volume;
+  }
+
+  /**
+  * Invoked when the base frequency slider is changed.
+  *
+  * @param {Event} event An 'input' event object.
+  */
+  onBaseFSliderUpdate(event) {
+    let bFSlider = document.querySelector("#baseFSlider");
+    var freq = Number(bFSlider.value);
+    this._binauralbeat.baseFrequency = freq;
+    document.querySelector("#basefreq").value = freq;
+  }
+
+  /**
+  * Invoked when the beat frequency slider is changed.
+  *
+  * @param {Event} event An 'input' event object.
+  */
+  onBeatFSliderUpdate(event) {
+    let bFSlider = document.querySelector("#beatFSlider");
+    var freq = Number(bFSlider.value);
+    this._binauralbeat.beatFrequency = freq;
+    document.querySelector("#beatfreq").value = freq;
+    if (this._playing == true) {
+      this.stopHaptics();
+      this.startHaptics();
+    }
+  }
+
+  /**
+  * Toggles NRT playback, including all sub-components.
+  */
+  startStopPlayback() {
+    if (this._playing != false) {
+      this.stopPlayback();
+      this._playing = false;
+    } else {
+      this._playing = true;
+      this.startPlayback();
+    }
+  }
+
+  /**
+  * Starts NRT playback, including all sub-components if enabled.
+  */
+  startPlayback() {
+    var baseElement = document.querySelector("#basefreq");
+    var beatElement = document.querySelector("#beatfreq");
+    var volSlider = document.querySelector("#volumeSlider");
+    var baseFreq = Number(baseElement.value);
+    var beatFreq = Number(beatElement.value);
+    var volume = Number(volSlider.value);
+    var startLabel = document.querySelector("#NRT > #parameters > #startStopButton > #start");
+    var stopLabel = document.querySelector("#NRT > #parameters > #startStopButton > #stop");
+    stopLabel.style = "display:block";
+    startLabel.style = "display:none";
+    this._binauralbeat.baseFrequency = baseFreq;
+    this._binauralbeat.beatFrequency = beatFreq;
+    this._binauralbeat.start();
+    this._binauralbeat.volume = volume;
+    if (this._hapticsEnabled == true) {
+      this.startHaptics();
+    }
+    if (this._visualsEnabled == true) {
+      this.startVisuals();
+    }
+  }
+
+  /**
+  * Stops NRT playback, including all sub-components.
+  */
+  stopPlayback() {
+    try {
+      this._binauralbeat.stop();
+    } catch (err) {}
+    try {
+      this.stopHaptics();
+    } catch (err) {}
+    try {
+      this.stopVisuals();
+    } catch (err) {}
+    this._playing = false;
+    var startLabel = document.querySelector("#NRT > #parameters > #startStopButton > #start");
+    var stopLabel = document.querySelector("#NRT > #parameters > #startStopButton > #stop");
+    stopLabel.style = "display:none";
+    startLabel.style = "display:block";
+  }
+
+  /**
+  * Disables the NRT component.
+  */
+  disable() {
+    this.stopPlayback();
+    var startLabel = document.querySelector("#NRT > #parameters > #startStopButton > #start");
+    var stopLabel = document.querySelector("#NRT > #parameters > #startStopButton > #stop");
+    stopLabel.style = "display:none";
+    startLabel.style = "display:block";
+  }
+
+  /**
+  * Enables the NRT component.
+  */
+  enable() {
+  }
+
+  /**
+  * @private
+  */
+  toString() {
+    return ("[NRT]");
+  }
+
+}
+</script>
+      <script type="text/javascript" language="javascript">/**
+* @class Functionality for Spot Situational Analysis component.
+*
+* @author IONIC Research Labs, a division of TSG.
+* @version 0.1.0
+* @copyright MIT License
+*/
+class SSA extends EventTarget {
+
+  /**
+  * Creates a new instance.
+  */
+  constructor() {
+    super();
+    this._stats = [];
+    this._timerValue = 0;
+    if (document.readyState != "complete") {
+      document.addEventListener("readystatechange", event => {
+        if (document.readyState == "complete") {
+          this.initialize();
+        }
+      });
+    } else {
+      this.initialize();
+    }
+  }
+
+  /**
+  * Initializes the instance by setting default values, restoring the previous
+  * session, and updating the UI.
+  */
+  initialize() {
+    document.querySelector("section#SSA").instance = this;
+    document.querySelector("#SSA  > #startStopButton > #stop").style = "display:none";
+    var inputFields = document.querySelectorAll("section#SSA  input");
+    for (var count = 0; count < inputFields.length; count++) {
+      inputFields[count].addEventListener("change", this.onInputFieldChange.bind(this));
+      inputFields[count].addEventListener("click", this.onInputFieldClick.bind(this));
+      inputFields[count].addEventListener("touch", this.onInputFieldClick.bind(this));
+    }
+    this.restoreSession();
+    this.showStats();
+  }
+
+  /**
+  * @property {String} Returns the HTML entity codes for a sequential clockface
+  * animation.
+  * @readonly
+  */
+  get HTMLClockFaces() {
+    return([
+      "&#x1f55b;",
+      "&#x1f567;",
+      "&#x1f550;",
+      "&#x1f55c;",
+      "&#x1f551;",
+      "&#x1f55d;",
+      "&#x1f552;",
+      "&#x1f55e;",
+      "&#x1f553;",
+      "&#x1f55f;",
+      "&#x1f554;",
+      "&#x1f560;",
+      "&#x1f555;",
+      "&#x1f561;",
+      "&#x1f556;",
+      "&#x1f562;",
+      "&#x1f557;",
+      "&#x1f563;",
+      "&#x1f558;",
+      "&#x1f564;",
+      "&#x1f559;",
+      "&#x1f565;",
+      "&#x1f55a;",
+      "&#x1f566;"
+    ])
+  }
+
+  /**
+  * @property {String} Returns the browser's default audio context object.
+  * @readonly
+  * @static
+  */
+  static get audioContext() {
+    if ((SSA._audioContext == null) || (SSA._audioContext == undefined)) {
+      SSA._audioContext = new AudioContext({
+         latencyHint: "playback",
+         sampleRate: 8000
+      });
+    }
+    return (SSA._audioContext);
+  }
+
+  /**
+  * @property {Number} The resolution of the SSA timer clock, in seconds.
+  */
+  get timerResolution() {
+    if ((this._timerresolution == null) || (this._timerresolution == undefined)) {
+      this._timerresolution = 1;
+    }
+    return (this._timerresolution);
+  }
+
+  set timerResolution(resSet) {
+    this._timerresolution = resSet;
+  }
+
+  /**
+  * Restores the SSA component's previous statefrom local storage, if available,
+  * or sets default values.
+  */
+  restoreSession() {
+    var bbSettings = localStorage.getItem("AFK_SSA");
+    if (bbSettings != null) {
+      bbSettings = JSON.parse(bbSettings);
+      this._stats = bbSettings.stats;
+      if ((this._stats == undefined) || (this._stats == null)) {
+        this._stats = [];
+      } else {
+        //restore last time for trend calculation
+        if (this._stats.length > 0) {
+          this._timerValue = this._stats[this._stats.length-1];
+        } else {
+          this._timerValue = 0;
+        }
+      }
+      for (var selector in bbSettings.fields) {
+        document.querySelector("#"+selector).value = bbSettings.fields[selector];
+      }
+      console.log("Restored settings:"+JSON.stringify(bbSettings));
+    } else {
+      console.warn ("No previous settings to restore.");
+    }
+  }
+
+  /**
+  * Saves the SSA component's current state to local storage.
+  */
+  saveSession() {
+    var bbSettings = new Object();
+    bbSettings.fields = new Object();
+    var inputFields = document.querySelectorAll("section#SSA input");
+    for (var count = 0; count < inputFields.length; count++) {
+      bbSettings.fields[inputFields[count].id] = inputFields[count].value;
+    }
+    bbSettings.stats = this._stats;
+    localStorage.AFK_SSA = JSON.stringify(bbSettings);
+  }
+
+  /**
+  * Handles changes to any SSA input field.
+  * @param {Event} event The "change" event dispatched from an input field
+  * instance.
+  */
+  onInputFieldChange(event) {
+    this.saveSession();
+  }
+
+  /**
+  * Handles click or touch events on any SSA input field.
+  * @param {Event} event The "click" or "touch" event dispatched from an
+  * input field instance.
+  */
+  onInputFieldClick(event) {
+    event.target.style.backgroundColor = "#FFFFFF";
+    event.target.style.color = "#000000";
+    event.target.complete = true;
+    var inputFields = document.querySelectorAll("section#SSA > input[id^='item']");
+    for (var count=0; count < inputFields.length; count++) {
+      if (inputFields[count].complete != true){
+        return;
+      }
+    }
+    if (this._playing == true) {
+      var minRandom = parseInt(document.querySelector("#SSA > div > #minRandomSeconds").value);
+      var maxRandom = parseInt(document.querySelector("#SSA > div > #maxRandomSeconds").value);
+      var randomSecs = Math.floor((Math.random()*(maxRandom-minRandom+1))+minRandom);
+      this.stopTimer();
+      this.start(randomSecs);
+    }
+  }
+
+  /**
+  * Plays an alert and vibrates the device (if available).
+  *
+  * @param {Number} hz The tone of the alert sound, in hertz.
+  * @param {Number} durationSecs The duration of the alert, in seconds.
+  */
+  playAlert(hz=440, durationSecs=2) {
+    if ((this._volume == null) || (this._volume == undefined)) {
+      this._volume = SSA.audioContext.createGain();
+      this._volume.connect(SSA.audioContext.destination);
+    }
+    this._volume.gain.value = 1;
+    this._oscillator = SSA.audioContext.createOscillator();
+    this._oscillator.type = "square";
+    this._oscillator.frequency.value = hz;
+    this._oscillator.connect(this._volume);
+    this._oscillator.start();
+    this._oscillator.stop(SSA.audioContext.currentTime + durationSecs);
+    try {
+      navigator.vibrate(durationSecs*1000); //ms
+    } catch (err) {}
+    this._playing = true;
+  }
+
+  /**
+  * Starts the SSA countdown timer.
+  *
+  * @param {Number} countdown The duration of the countdown, in seconds.
+  * Default is 1.
+  */
+  start(countdown=1) {
+    if (this.checkInputFields() == false) {
+      var startLabel = document.querySelector("#SSA > #startStopButton > #start");
+      var stopLabel = document.querySelector("#SSA  > #startStopButton > #stop");
+      stopLabel.style = "display:none";
+      startLabel.style = "display:block";
+      alert ("At least one SSA parameter must be set.");
+      this.lockInputFields(false);
+      return;
+    }
+    if ((this._volume == null) || (this._volume == undefined)) {
+      this._volume = SSA.audioContext.createGain();
+      this._volume.connect(SSA.audioContext.destination);
+    }
+    this._volume.gain.value = 0;
+    this._oscillator = SSA.audioContext.createOscillator();
+    this._oscillator.type = "sine";
+    this._oscillator.frequency.value = 1;
+    this._oscillator.connect(this._volume);
+    this._boundTickListener = this.onClockTick.bind(this, countdown);
+    this._oscillator.addEventListener("ended", this._boundTickListener);
+    this._oscillator.start();
+    this._oscillator.stop(SSA.audioContext.currentTime + this.timerResolution);
+    this._playing = true;
+  }
+
+  /**
+  * Starts or stops the SSA counter, depending on current state.
+  */
+  startStop() {
+    var startLabel = document.querySelector("#SSA > #startStopButton > #start");
+    var stopLabel = document.querySelector("#SSA  > #startStopButton > #stop");
+    if (this._playing == true) {
+      this.stop();
+      this.stopTimer(false);
+      stopLabel.style = "display:none";
+      startLabel.style = "display:block";
+      this.lockInputFields(false);
+    } else {
+      var minRandom = parseInt(document.querySelector("#SSA > div > #minRandomSeconds").value);
+      var maxRandom = parseInt(document.querySelector("#SSA > div > #maxRandomSeconds").value);
+      var randomSecs = Math.floor((Math.random()*(maxRandom-minRandom+1))+minRandom);
+      this.lockInputFields(true);
+      this._clockIndex = 0;
+      stopLabel.style = "display:block";
+      startLabel.style = "display:none";
+      this.start(randomSecs);
+    }
+  }
+
+  /**
+  * Stops the current SSA counter, if active.
+  */
+  stop() {
+    if ((this._oscillator != null) && (this._oscillator != undefined)) {
+      this._oscillator.removeEventListener("ended", this._boundTickListener);
+      this._oscillator.stop(0);
+      this._oscillator.disconnect(this._volume);
+      this._oscillator = null;
+      delete this._oscillator;
+      this._boundTickListener = null;
+      delete this._boundTickListener;
+    }
+    this.setInputFields();
+    this._playing = false;
+  }
+
+  /**
+  * Handles a single iteration (tick) of the SSA counter.
+  *
+  * @param {Number} countdown The current countdown tick value.
+  * @param {Event} event The timer event object.
+  */
+  onClockTick (countdown, event) {
+    countdown--;
+    this.stop();
+    if (countdown > 0) {
+      this.start(countdown);
+    } else {
+      var activeFields = this.setInputFields("#FF0000", "#FFFFFF");
+      if (activeFields > 0) {
+        this.playAlert();
+        this.startTimer();
+      }
+    }
+    var clockElement = document.querySelector("section#SSA > #clock");
+    clockElement.innerHTML = this.HTMLClockFaces[this._clockIndex];
+    this._clockIndex += 1;
+    this._clockIndex %= this.HTMLClockFaces.length;
+  }
+
+  /**
+  * Checks the SSA input fields for valid input.
+  *
+  * @param {String} selector The CSS selector of the input fields to check.
+  * @return {Boolean} True if at least one input field has been set, false
+  * otherwise.
+  */
+  checkInputFields(selector="section#SSA > input[id^='item']") {
+    var fields = document.querySelectorAll(selector);
+    for (var count=0; count<fields.length; count++) {
+      if (fields[count].value != "") {
+        return (true);
+      }
+    }
+    return (false);
+  }
+
+  /**
+  * Updates the styles of the SSA input fields.
+  *
+  * @param {String} bgcolor The background color to set the fields to.
+  * @param {String} fgcolor The foreground (text) color to set the fields to.
+  * @param {String} selector The CSS selector of the input fields to update.
+  */
+  setInputFields(bgcolor="#FFFFFF", fgcolor="#000000", selector="section#SSA > input[id^='item']") {
+    var fieldsUpdated = 0;
+    var fields = document.querySelectorAll(selector);
+    for (var count=0; count<fields.length; count++) {
+      if (fields[count].value != "") {
+        fields[count].complete = false;
+        fields[count].style.backgroundColor=bgcolor;
+        fields[count].style.color=fgcolor;
+        fieldsUpdated++;
+      } else {
+        fields[count].complete = true;
+      }
+    }
+    return (fieldsUpdated);
+  }
+
+  /**
+  * Locks or unlocks the SSA input fields.
+  *
+  * @param {Boolean} locked True if fields should be locked (not allow input).
+  * @param {String} selector The CSS selector of the input fields to lock or unlock.
+  */
+  lockInputFields(locked=true, selector="section#SSA > input[id^='item']") {
+    var fields = document.querySelectorAll(selector);
+    for (var count=0; count<fields.length; count++) {
+      try {
+        if (locked == true) {
+          fields[count].setAttribute("readonly", "1");
+        } else {
+          fields[count].removeAttribute("readonly");
+        }
+      } catch (err) {}
+    }
+  }
+
+  /**
+  * Starts the SSA reaction timer.
+  */
+  startTimer() {
+    this._timer = setInterval(this.onTimerTick.bind(this), 100);
+    this._timerValue = 0;
+  }
+
+  /**
+  * Invoked on every tick of the SSA reaction timer.
+  */
+  onTimerTick() {
+    this._timerValue += 100;
+    var currentTimeElement = document.querySelector("section#SSA #currentTime");
+    var secs = Math.floor (this._timerValue / 1000);
+    var msecs = (this._timerValue / 10) % 100;
+    if (secs < 10) {
+      secs = "0" + String(secs);
+    } else {
+      secs = String(secs);
+    }
+    if (msecs < 10) {
+      msecs = "0" + String(msecs);
+    } else {
+      msecs = String(msecs);
+    }
+    currentTimeElement.innerHTML = `${secs}:${msecs}`;
+  }
+
+  /**
+  * Displays the current and average statistics of the SSA reaction time.
+  */
+  showStats() {
+    var currentTimeElement = document.querySelector("section#SSA #averageTime");
+    if (this._stats.length == 0) {
+      var totalTimerValue = 0;
+      var secs = "00";
+      var msecs = "00";
+    } else {
+      totalTimerValue = 0;
+      for (var count=0; count < this._stats.length; count++) {
+        totalTimerValue += this._stats[count];
+      }
+      totalTimerValue = Math.round(totalTimerValue / this._stats.length);
+      secs = Math.floor (totalTimerValue / 1000);
+      msecs = Math.floor (totalTimerValue / 10) % 100;
+      if (secs < 10) {
+        secs = "0" + String(secs);
+      } else {
+        secs = String(secs);
+      }
+      if (msecs < 10) {
+        msecs = "0" + String(msecs);
+      } else {
+        msecs = String(msecs);
+      }
+    }
+    if (totalTimerValue == this._timerValue) {
+      var trend = "";
+    } else if (totalTimerValue > this._timerValue) {
+      trend = "&darr;";
+    } else {
+      trend = "&uarr;";
+    }
+    currentTimeElement.innerHTML = `${secs}:${msecs} (${this._stats.length})${trend}`;
+  }
+
+  /**
+  * Stops the SSA reaction timer.
+  *
+  * @param {Boolean} save If true, current SSA reaction timer statistics will also
+  * be saved to local storage.
+  */
+  stopTimer(save = true) {
+    try {
+      clearInterval(this._timer);
+      this._timer = null;
+      if (save == true) {
+        this._stats.push(this._timerValue);
+        this.saveSession();
+        this.showStats();
+      }
+    } catch (err) {}
+  }
+
+  /**
+  * Resets the SSA reaction timer.
+  */
+  resetTimer() {
+    this._timerValue = 0;
+    var currentTimeElement = document.querySelector("section#SSA #currentTime");
+    currentTimeElement.innerHTML = `00:00`;
+    this._stats = [];
+    this.saveSession();
+    this.showStats();
+  }
+
+  /**
+  * Disables the SSA component.
+  */
+  disable() {
+    this.stop();
+    this.stopTimer(false);
+    var startLabel = document.querySelector("#SSA > #startStopButton > #start");
+    var stopLabel = document.querySelector("#SSA  > #startStopButton > #stop");
+    stopLabel.style = "display:none";
+    startLabel.style = "display:block";
+  }
+
+  /**
+  * Enables the SSA component.
+  */
+  enable() {
+  }
+
+  /**
+  * @private
+  */
+  toString() {
+    return ("[SSA]");
+  }
+
+}
+</script>
+      <!-- script src="./EyesEars/index.js" type="text/javascript" language="javascript"></script -->
+      <script type="text/javascript" language="javascript">/**
+* @file Startup and global functionality of the Agent Field Kit.
+*
+* @author IONIC Research Labs, a division of TSG.
+* @version 0.1.0
+* @copyright MIT License
+*/
+
+var nrt = new NRT();
+var ssa = new SSA();
+//var eyesears = new EyesEars();
+
+var openMenuSelector = null;
+
+/**
+* Displays a specific <section> while hiding all others.
+*
+* @param {String} selector The selector name of the section to show.
+* @param {String} type (optional) The type of selector to target ("id"
+* or "class").
+*/
+function showSection(selector, type="id") {
+  var allSections = document.querySelectorAll("section");
+  if (type == "id") {
+    var section = document.querySelector("#"+selector);
+  } else if (type == "class"){
+    section = document.querySelector("."+selector);
+  } else {
+    throw (new Error("Unrecognized selector type \""+type+"\""));
+  }
+  for (var count = 0; count < allSections.length; count++) {
+    if (allSections[count] === section) {
+      section.style.display = "inline-block";
+      if ((allSections[count].instance != undefined) && (allSections[count].instance != null)) {
+        allSections[count].instance.enable();
+      }
+    } else {
+      allSections[count].style.display = "none";
+      if ((allSections[count].instance != undefined) && (allSections[count].instance != null)) {
+        allSections[count].instance.disable();
+      }
+    }
+  }
+  hideMenu(openMenuSelector);
+  saveSection(selector, type);
+}
+
+/**
+* Opens a menu while closing any currently opened one.
+*
+* @param {String} selector The selector of the menu to open.
+*/
+function showMenu(selector) {
+  if (openMenuSelector != null) {
+    hideMenu(openMenuSelector);
+  }
+  try {
+    document.querySelector(selector).style.display = "block";
+    openMenuSelector = selector;
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+/**
+* Hides an open menu.
+*
+* @param {String} selector The selector of the menu to hide.
+*/
+function hideMenu(selector) {
+  if (selector == null) {
+    openMenuSelector = null;
+    return;
+  }
+  try {
+    document.querySelector(selector).style.display = "none";
+    openMenuSelector = null;
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+/**
+* Saves the currently opened section selector to local storage.
+*
+* @param {String} selector The selector name of the open section.
+* @param {String} type The type of selector.
+*/
+function saveSection(selector, type) {
+  var fkinfo = new Object();
+  fkinfo.section = new Object();
+  fkinfo.section.selector = selector;
+  fkinfo.section.type = type;
+  localStorage.AFK_FieldKit = JSON.stringify(fkinfo);
+}
+
+/**
+* Restores and displays the last opened section if available in
+* local storage. If not, the "NRT" section is displayed by default.
+*/
+function restoreSection() {
+  var fkinfo = localStorage.getItem("AFK_FieldKit");
+  if (fkinfo != null) {
+    console.log ("Restored settings: "+fkinfo);
+    fkinfo = JSON.parse(fkinfo);
+    showSection(fkinfo.section.selector, fkinfo.section.type);
+  } else {
+    console.log ("No settings saved. Showing default section \"NRT\".")
+    showSection("NRT");
+  }
+}
+
+window.onload = _ => {
+  restoreSection();
+}
+</script>
+   </head>
+   <body>
+      <div id="main-menu" class="pure-menu pure-menu-horizontal">
+        <ul class="pure-menu-list">
+         <li class="pure-menu-item pure-menu-has-children">
+           <a href="#" id="menuLink1" class="pure-menu-link" onclick="showMenu('#submenu1')">FIELD KIT</a>
+           <ul id="submenu1" class="pure-menu-children">
+                 <li class="pure-menu-item">
+                     <a href="#" class="pure-menu-link" onclick="showSection('NRT')">NRT</a>
+                 </li>
+                 <li class="pure-menu-item">
+                     <a href="#" class="pure-menu-link" onclick="showSection('SSA')">SSA</a>
+                 </li>
+                 <!-- li class="pure-menu-item">
+                     <a href="#" class="pure-menu-link" onclick="showSection('EyesEars')">Eyes &amp; Ears</a>
+                 </li -->
+             </ul>
+         </li>
+       </ul>
+     </div>
+      <section id="NRT">
+        <h2>NRT</h2>
+       <div id="parameters">
+         Base Frequency (Hz):<br>
+         <div class="verticalCenter">
+           <input id="basefreq" name="basefreq" type="number" value="120" max="24000" min="20">
+           <input type="range" min="0" max="2000" value="94.0" step="0.5" class="slider" id="baseFSlider">
+         </div>
+         Beat Frequency (Hz):<br>
+          <div class="verticalCenter">
+             <input id="beatfreq" name="beatfreq" type="number" value="22.00" max="300" min="0.05" step="0.05">
+             <input type="range" min="1" max="100" value="4.7" step="0.25" class="slider" id="beatFSlider">
+          </div>
+         <br><br>
+         <button class="pure-button" id="startStopButton" onclick="nrt.startStopPlayback()"><span id="start">▶&nbsp;START</span><span id="stop">⏹&nbsp;STOP</span></button>
+       </div>
+       <div id="volumecontainer" class="verticalCenter">
+         🔈<input type="range" min="1" max="100" value="50" step="1" class="slider" id="volumeSlider">&nbsp;🔊
+       </div>
+       <div class="verticalCenter" id="optionscontainer">
+         <div class="hapticscontainer verticalCenter">
+          🖐&nbsp;<label class="switch"><input type="checkbox" id="hapticsSwitch"><span class="cbslider round"></span></label><br>
+          👁&nbsp;<label class="switch"><input type="checkbox" id="visualsSwitch"><span class="cbslider round"></span></label><br>
+         </div>
+         <div class="visualscontainer verticalCenter">
+            <div>🎨&nbsp;<br><input type="color" id="visualscolor1" name="visualscolor1" value="#e66465"></div><div><input type="color" id="visualscolor2" name="visualscolor2" value="#e66465"></div>
+         </div>
+       </div>
+     </section>
+     <section id="SSA">
+       <h2>SSA</h2><div id="clock">🕛</div><br>
+        <div class="output-container"><br>Average:&nbsp;<div class="output-text" id="averageTime">00:00</div><br>Current: <div id="currentTime" class="output-text">00:00</div><br><br><button class="pure-button" id="resetButton" onclick="ssa.resetTimer()"><span id="label">RESET</span></button></div><br>
+        <div class="input-container">Minimum seconds:<br><input type="number" class="short-input" id="minRandomSeconds" value="300" step="1"></div>&nbsp;&nbsp;<div class="input-container">Maximum seconds:<br><input type="number" class="short-input" id="maxRandomSeconds" value="900" step="1"></div>
+        <input type="text" class="long-input" id="item1" name="item1" placeholder="Spot Situational Analysis #1">
+        <input type="text" class="long-input" id="item2" name="item2" placeholder="Spot Situational Analysis #2">
+        <input type="text" class="long-input" id="item3" name="item3" placeholder="Spot Situational Analysis #3">
+        <input type="text" class="long-input" id="item4" name="item4" placeholder="Spot Situational Analysis #4">
+        <input type="text" class="long-input" id="item5" name="item5" placeholder="Spot Situational Analysis #5">
+        <button class="pure-button" id="startStopButton" onclick="ssa.startStop()"><span id="start">▶&nbsp;START</span><span id="stop">⏹&nbsp;STOP</span></button>
+     </section>
+     <!-- section id="EyesEars">
+       <h2>Eyes &amp; Ears</h2><br>
+       Filter Frequency (Hz):<br>
+        <div class="verticalCenter">
+           <input id="filterFreq" name="filterFreq" type="number" value="160" max="2000" min="1" step="1" />
+           <input type="range" min="1" max="2000" value="160" step="1" class="slider" id="filterFSlider">
+        </div>
+        Filter Width (Hz):<br>
+        <div class="verticalCenter">
+           <input id="filterFreqWidth" name="filterFreqWidth" type="number" value="22.00" max="300" min="0.05" step="0.05" />
+           <input type="range" min="1" max="100" value="100" step="1" class="slider" id="filterFWSlider">
+        </div>
+       <br><br>
+       <button class="pure-button" id="startStopButton" onclick="eyesears.startStopEars()"><span id="start">&#x25B6;&nbsp;START EARS</span><span id="stop">&#x23F9;&nbsp;STOP EARS</span></button>
+     </section -->
+   
+
+</body></html>
