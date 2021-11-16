@@ -19,6 +19,8 @@ Click/touch fullscreen visuals to return to main interface.
 
 #### SSA
 
+Leave device **on** and application focused while active (some browsers may support background operation).
+
 Set SSA input fields and random minimum/maximum time range (seconds) when component is stopped.
 
 Non-empty SSA input fields will turn red when random timer has elapsed. Perform SSA evaluation and click/touch each field when completed. When all active fields have been clicked/touched, timer will restart with new random interval in the specified range.
