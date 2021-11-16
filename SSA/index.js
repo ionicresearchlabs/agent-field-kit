@@ -14,6 +14,7 @@ class SSA extends EventTarget {
     super();
     this._stats = [];
     this._timerValue = 0;
+    this._wakeLock = null;
     if (document.readyState != "complete") {
       document.addEventListener("readystatechange", event => {
         if (document.readyState == "complete") {
@@ -209,8 +210,10 @@ class SSA extends EventTarget {
   *
   * @param {Number} countdown The duration of the countdown, in seconds.
   * Default is 1.
+  * @async
+  * @return {Boolean} True if successfully started, false otherwise.
   */
-  start(countdown=1) {
+  async start(countdown=1) {
     if (this.checkInputFields() == false) {
       var startLabel = document.querySelector("#SSA > #startStopButton > #start");
       var stopLabel = document.querySelector("#SSA  > #startStopButton > #stop");
@@ -218,7 +221,7 @@ class SSA extends EventTarget {
       startLabel.style = "display:block";
       alert ("At least one SSA parameter must be set.");
       this.lockInputFields(false);
-      return;
+      return (false);
     }
     if ((this._volume == null) || (this._volume == undefined)) {
       this._volume = SSA.audioContext.createGain();
@@ -234,12 +237,14 @@ class SSA extends EventTarget {
     this._oscillator.start();
     this._oscillator.stop(SSA.audioContext.currentTime + this.timerResolution);
     this._playing = true;
+    return (true);
   }
 
   /**
   * Starts or stops the SSA counter, depending on current state.
+  * @async
   */
-  startStop() {
+  async startStop() {
     var startLabel = document.querySelector("#SSA > #startStopButton > #start");
     var stopLabel = document.querySelector("#SSA  > #startStopButton > #stop");
     if (this._playing == true) {
@@ -248,6 +253,15 @@ class SSA extends EventTarget {
       stopLabel.style = "display:none";
       startLabel.style = "display:block";
       this.lockInputFields(false);
+      try {
+        this._wakeLock.removeEventListener("release", this._wakeLock._listener);
+      } catch (err) {
+      }
+      try {
+        await this._wakeLock.release();
+      } catch (err) {}
+      this._wakeLock = null;
+      return (false);
     } else {
       var minRandom = parseInt(document.querySelector("#SSA > div > #minRandomSeconds").value);
       var maxRandom = parseInt(document.querySelector("#SSA > div > #maxRandomSeconds").value);
@@ -256,14 +270,22 @@ class SSA extends EventTarget {
       this._clockIndex = 0;
       stopLabel.style = "display:block";
       startLabel.style = "display:none";
+      try {
+        this._wakeLock = await navigator.wakeLock.request("screen");
+        this._wakeLock._listener = this.stop.bind(this);
+        this._wakeLock.addEventListener("release", this._wakeLock._listener);
+      } catch (err) {
+      }
       this.start(randomSecs);
+      return (true);
     }
   }
 
   /**
   * Stops the current SSA counter, if active.
+  * @async
   */
-  stop() {
+  async stop() {
     if ((this._oscillator != null) && (this._oscillator != undefined)) {
       this._oscillator.removeEventListener("ended", this._boundTickListener);
       this._oscillator.stop(0);
@@ -275,6 +297,7 @@ class SSA extends EventTarget {
     }
     this.setInputFields();
     this._playing = false;
+    return (true);
   }
 
   /**
@@ -282,14 +305,23 @@ class SSA extends EventTarget {
   *
   * @param {Number} countdown The current countdown tick value.
   * @param {Event} event The timer event object.
+  * @async
   */
-  onClockTick (countdown, event) {
+  async onClockTick (countdown, event) {
     countdown--;
     this.stop();
     if (countdown > 0) {
       this.start(countdown);
     } else {
       var activeFields = this.setInputFields("#FF0000", "#FFFFFF");
+      try {
+        this._wakeLock.removeEventListener("release", this._wakeLock._listener);
+      } catch (err) {
+      }
+      try {
+        await this._wakeLock.release();
+      } catch (err) {}
+      this._wakeLock = null;
       if (activeFields > 0) {
         this.playAlert();
         this.startTimer();
