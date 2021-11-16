@@ -5,7 +5,7 @@
 [https://ionicresearchlabs.github.io/agent-field-kit/](https://ionicresearchlabs.github.io/agent-field-kit/)
 
 #### Offline:
-Load above and use while disconnected or load [index-device.html](https://github.com/ionicresearchlabs/agent-field-kit/blob/main/index-device.html) locally from device (some functionality unavailable).
+Load Live ([above](https://github.com/ionicresearchlabs/agent-field-kit#live)) and use while disconnected or load [index-device.html](https://github.com/ionicresearchlabs/agent-field-kit/blob/main/index-device.html) locally from device (some functionality unavailable).
 
 ## Use
 #### NRT
